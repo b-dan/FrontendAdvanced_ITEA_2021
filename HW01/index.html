@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Order</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/icons_style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="site">
+        <div class="header_wrap">
+            <header>
+                <div class="header">
+                    <a href="#loupe"><img src="./img/logo.png" alt="logo"></a>
+                    <div class="menu">
+                        <a href="#loupe">Каталог</a>
+                        <a href="#user">Обучение</a>
+                        <a href="#shopping_bag">Партнерам</a>
+                        <a href="#shopping_bag">Акции</a>
+                    </div>
+                    <div class="header-right">
+                        <a href="#loupe"><i class="icon _icon-loupe1"></i></a>
+                        <a href="#user"><i class="icon _icon-user1"></i></a>
+                        <a href="#shopping_bag"><i class="icon _icon-shopping-bag1"></i></a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="wrap">
+            <header>
+                <div class="sub_header">
+                    <h1 class="sub_header_title">
+                        Оформление заказа
+                    </h1>
+                </div>
+            </header>
+            <section>
+                <form action="#" method="POST">
+                    <div class="left_section">
+                        <div class="login_register">
+                            <div class="radio_form">
+                                <h2 class="radio_form_title ">Войти или зарегистрироваться</h2>
+                                <div class="radio_form_choice_1">
+                                    <input type="radio" id="login" name="login_register" value="login">
+                                    <label for="login">Войти</label>
+                                </div>
+                                <div class="radio_form_choice_2">
+                                    <input type="radio" id="register" name="login_register" value="register">
+                                    <label for="register">Зарегистрироваться</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data_and_delivery">
+                            <div class="personal_data">
+                                <h2 class="personal_data_title">Личные данные</h2>
+                                <div class="personal_data_input_name input">
+                                    <label for="name">Ваше имя</label> <br>
+                                    <input type="text" data-user-name = "userName" id="name" placeholder="Ваше имя">
+                                </div>
+                                <div class="personal_data_input_last_name input">
+                                    <label for="last_name">Ваша фамилия</label> <br>
+                                    <input type="text" data-user-name = "userName" id="last_name" placeholder="Ваша фамилия">
+                                </div>
+                                <div class="personal_data_input_email input">
+                                    <label for="email">Электронный адрес</label> <br>
+                                    <input type="email" id="email" placeholder="Электронный адрес">
+                                </div>
+                                <div class="personal_data_input-mob-tel input">
+                                    <label for="mob_tel">Мобильный номер</label> <br>
+                                    <input type="tel" id="mob_tel" placeholder="Мобильный номер">
+                                </div>
+                                <div class="personal_data_input_additional_contact input">
+                                    <label for="additional_contact">Дополнительный контакт</label> <br>
+                                    <input type="text" id="additional_contact" placeholder="Дополнительный контакт">
+                                </div>
+                            </div>
+                            <div class="delivery">
+                                <h2 class="delivery_title ">Данные о доставке</h2>
+                                <div class="delivery_input_country input">
+                                    <label for="country">Страна</label> <br>
+                                    <input type="text" id="country" placeholder="Украина" disabled>
+                                </div>
+                                <div class="delivery_input_city input">
+                                    <label for="city">Выберите город</label>
+                                    <input list="city-list" id="city" name="city" placeholder="Город"/>
+                                    <datalist id="city-list">
+                                    <option value="Киев">
+                                    <option value="Одесса">
+                                    <option value="Мариуполь">
+                                    <option value="Львов">
+                                    <option value="Днепр">
+                                </datalist>
+                                </div>
+                                
+                                
+                                <div class="delivery_input_index input">
+                                    <label for="index">Индекс</label> <br>
+                                    <input type="text" id="index" placeholder="Индекс">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_section">
+                        <div class="delivery_method">
+                            <div class="radio_form">
+                                <h2 class="radio_form_title">Способ доставки</h2>
+                                <div class="radio_form_choice_1">
+                                    <input type="radio" id="delivery_1" name="delivery_method_choice"
+                                        value="delivery_method_1">
+                                    <label for="delivery_1">Способ доставки</label>
+                                </div>
+                                <div class="radio_form_choice_2">
+                                    <input type="radio" id="delivery_2" name="delivery_method_choice"
+                                        value="delivery_method_2">
+                                    <label for="delivery_2">Способ доставки</label>
+                                </div>
+                                <div class="radio_form_choice_3">
+                                    <input type="radio" id="delivery_3" name="delivery_method_choice"
+                                        value="delivery_method_3">
+                                    <label for="delivery_3">Способ доставки</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment_method">
+                            <div class="radio_form">
+                                <h2 class="radio_form_title">Способ оплаты</h2>
+                                <div class="radio_form_choice_1">
+                                    <input type="radio" id="payment_1" name="payment_method_choice"
+                                        value="payment_method_1">
+                                    <label for="payment_1">Способ доставки</label>
+                                </div>
+                                <div class="radio_form_choice_2">
+                                    <input type="radio" id="payment_2" name="payment_method_choice"
+                                        value="payment_method_2">
+                                    <label for="payment_2">Способ оплаты</label>
+                                </div>
+                                <div class="radio_form_choice_3">
+                                    <input type="radio" id="payment_3" name="payment_method_choice"
+                                        value="payment_method_3">
+                                    <label for="payment_3">Способ оплаты</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket">
+                            <h2 class="basket_title">Ваша корзина</h2>
+                            <table class="basket_table">
+                                <tbody>
+                                    <tr>
+                                        <th>Фото</th>
+                                        <th>товар</th>
+                                        <th class="quantity">Количество</th>
+                                        <th class="costs">цена</th>
+                                        <th class="result">Итого</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/Product.jpg" alt="Product">
+                                        </td>
+                                        <td>Название товара</td>
+                                        <td class="count_product">
+                                            <div class="number">
+                                                <input type="number" min="1" value="1" placeholder="1">
+                                            </div>
+                                            <div class="button_update">
+                                                <a href="#">
+                                                    <div class="arrow_update">
+                                                        <img src="./img/Arrow_Top.png" alt="Arrow_Top">
+                                                        <img src="./img/Arrow_Bottom.png" alt="Arrow_Bottom">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="button_del">
+                                                <a href="#"><img src="./img/Cross.png" alt="Del"></a>
+                                            </div>
+                                        </td>
+                                        <td>10&nbsp;23,58 RUB</td>
+                                        <td>100&nbsp;023,58 RUB</td>
+                                    </tr>
+                                    <tr class="price_product">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>стоимость товара:</td>
+                                        <td>100&nbsp;523,58 RUB</td>
+                                    </tr>
+                                    <tr class="price_delivery">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="delivery_color">Доставка:</td>
+                                        <td class="cash_color">100 RUB</td>
+                                    </tr>
+                                    <tr class="total">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>ИТОГО:</td>
+                                        <td>100&nbsp;623,58 RUB</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="pay">
+                                <h2>Способ оплаты</h2>
+                                <div class="pay_textarea">
+                                    <label for="comment">Дополнительные комментарии</label><br/>
+                                    <textarea id="comment" name="comment" placeholder="Дополнительные комментарии к заказу" cols="50" rows="4"></textarea>
+                                </div>
+                                <div class="pay_checkbox">
+                                    <input type="checkbox" id="check" name="checkbox_personal_data"
+                                        class="checkbox_check">
+                                    <label for="check" class="checkbox_label">Согласие на обработку личных данных</label>
+                                </div>
+                                <div class="button_pay">
+                                    <a href="#" class="button_pay_2">Перейти к оплате</a> 
+                                </div>
+                            </div>
+                        </div>
+                </form>
+            </section>
+        </div>
+        <div class="footer_wrap">
+            <footer>
+                <div class="footer">
+                    <a href="#loupe"><img src="./img/logo.png" alt="logo"></a>
+                    <div class="footer-menu">
+                        <a href="#team">Наша команда</a>
+                        <a href="#contacts">Контакты</a>
+                    </div>
+                    <div class="footer-right">
+                        <a href="#facebook"><i class="icon _icon-fb"></i></a>
+                        <a href="#instagram"><i class="icon _icon-instagram"></i></a>
+                        <a href="#youtube"><i class="icon _icon-youtube"></i></a>
+                        <a href="#linkedin"><i class="icon _icon-linkedin"></i></a>
+                        <a href="#pinterest"><i class="icon _icon-pinterest-social-logo"></i></a>
+                    </div>
+                </div>
+            </footer>
+        </div> 
+    </div>
+    <script src="./script/check.js"></script>
+</body>
+</html>

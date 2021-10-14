@@ -1,0 +1,333 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+body{
+	margin: 0;
+	display: block;
+	/*display: flex*/
+}
+.site {
+    
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    color: #354657;
+}
+.header_wrap{
+	background-color: #F8F4FC;
+	background-size: cover;
+	margin: 0 auto;
+}
+.header {
+	font-weight: 700;
+	margin-left: auto;
+    margin-right: auto;
+	vertical-align: middle;
+	width: 1280px;
+	overflow: hidden;
+	padding: 20px 10px;
+}
+
+.menu {
+	margin-top: 1rem;
+	margin-left: 400px;
+}
+  
+.header a {
+	float: left;
+	color: black;
+	text-align: center;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px; 
+	line-height: 25px;
+	border-radius: 4px;
+}
+  
+.header a.logo {
+	font-size: 25px;
+	font-weight: bold;
+}
+  
+.header-right {
+	float: right;
+}
+  
+@media screen and (max-width: 500px) {
+	.header a {
+	  float: none;
+	  display: block;
+	  text-align: left;
+	}
+	
+	.header-right {
+	  float: none;
+	}
+}
+/*8888888888888888888888888888888888888888888888*/
+.wrap {
+	width: 1280px;
+	margin: 0 auto;
+}
+h1,
+h2 {
+	margin: 0;
+}
+h1 {
+	font-size: 1.875rem;
+}
+h2 {
+	font-size: 1.25rem;
+	padding-bottom: 1.25rem;
+}
+.sub_header{
+	margin-bottom: 1.875rem;
+}
+.sub_header_title {
+	border-bottom: 1px solid #e2e2e2;
+	padding: 1.1rem 0;
+}
+.left_section {
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+}
+.data_and_delivery input {
+	width: 93%;
+	margin-bottom: 1.25rem;
+	line-height: 2.375rem;
+	border: 1px solid #b6b6b6;
+	margin-top: 0.625rem;
+	padding-left: 1.25rem;
+}
+.data_and_delivery input::placeholder {
+	color: #ada8a8;
+	font-size: 0.875rem;
+	font-weight: 200;
+}
+.radio_form_choice_1 {
+	display: inline-block;
+	margin-right: 1rem;
+}
+.radio_form_choice_2 {
+	display: inline-block;
+	margin-right: 1rem;
+}
+.radio_form_choice_3 {
+	display: inline-block;
+}
+
+.login_register,
+.data_and_delivery,
+.delivery_method,
+.payment_method,
+.pay {
+	padding: 1.875rem 1.25rem 1.25rem;
+	background-color: #f0f2f5;
+}
+.data_and_delivery{
+	margin-top: 1.875rem;
+}
+.personal_data_title {
+	padding-bottom: 1.875rem;
+}
+.delivery_title {
+	padding: 1.875rem 0;
+}
+.right_section {
+	width: 68%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 1.3rem;
+}
+.payment_method {
+	margin-top: 1.875rem;
+}
+.basket {
+	margin-top: 1.875rem;
+}
+.basket_table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.basket_table td,
+th {
+	vertical-align: middle;
+	line-height: 2.875rem;
+}
+.basket_table th {
+	background: #f0f2f5;
+	text-transform: uppercase;
+}
+.basket_table td:first-child {
+	width: 8%;
+	text-align: center;
+}
+.basket_table td:nth-child(2) {
+	width: 30%;
+    text-align: center;
+}
+.basket_table td:nth-child(3) {
+	width: 20%;
+	text-align: center;
+}
+.basket_table td:nth-child(4) {
+	width: 25%;
+	text-align: center;
+}
+.basket_table td:last-child {
+	width: 17%;
+}
+.price_product td:nth-child(4),
+.price_delivery td:nth-child(4),
+.total td:nth-child(4) {
+	text-align: right;
+	font-weight: 700;
+	padding-right: 1.875rem;
+	text-transform: uppercase;
+}
+.quantity {
+    padding-right: 20px;
+}
+.costs {
+    padding-right: 50px;
+}
+.result{
+    padding-right: 90px;
+}
+.delivery_color,
+.cash_color {
+    background: #FAFAFA;
+}
+.count_product div:nth-child(1n) {
+	display: inline-block;
+	text-align: center;
+}
+.count_product div a {
+	display: block;
+	line-height: 1.8rem;
+	border-radius: 3px;
+	text-decoration: none;
+	padding: 0.2rem 0.8rem;
+}
+.number > input {
+	max-width: 2rem;
+	min-width: 2rem;
+	padding: 0.5rem 0.25rem;
+	font-size: 1rem;
+	border: #e9e9e9 solid 1px;
+}
+.button_update a {
+	background-color: #946fd3;
+}
+.button_update a > div {
+	vertical-align: middle;
+}
+.button_update img {
+	display: block;
+}
+.button_del a {
+	background-color: #f83737;
+}
+.pay {
+	padding-top: 1.25rem;
+	margin-top: 1.875rem;
+}
+.pay_textarea textarea {
+	margin-top: 0.625rem;
+	padding-left: 0.625rem;
+	width: 834px;
+    height: 86px;
+	margin-bottom: 1rem;
+	border-radius: 3px;
+	border: 1px solid #b6b6b6;
+	resize: none;
+    margin-left: -6px;
+}
+.pay_textarea textarea::placeholder {
+	font-size: 0.875rem;
+	color: #ada8a8;
+}
+.pay_textarea label {
+	font-size: 0.875rem;
+}
+.button_pay {
+	text-align: right;
+	margin: 1.875rem 0;
+}
+.button_pay a {
+	display: inline-block;
+	background-color: #946fd3;
+	text-decoration: none;
+	color: #ffffff;
+	padding: 18px 35px;
+	border-radius: 30px;
+	font-weight: 700;
+}
+
+.button_pay_2 {
+	display: inline-block;
+	background-color: #946fd3;
+	text-decoration: none;
+	color: #ffffff;
+	padding: 18px 35px;
+	border-radius: 30px;
+	font-weight: 700;
+	border: none;
+	font-size: 1rem;
+}
+.button_pay_2:hover {
+	cursor: pointer;
+}
+
+.footer_wrap {
+	margin-top: 150px;
+	border-top: 1px solid #e2e2e2;
+	padding: 1.1rem 0;
+}
+.footer {
+	font-weight: 700;
+	margin-left: auto;
+    margin-right: auto;
+	vertical-align: middle;
+	width: 1280px;
+	overflow: hidden;
+	padding: 20px 10px;
+}
+.footer-right {
+	float: right;
+}
+.footer a {
+	float: left;
+	color: black;
+	text-align: center;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px; 
+	line-height: 25px;
+	border-radius: 4px;
+}
+.footer-right a {
+	font-size: 40px;
+}
+  
+.footer a.logo {
+	font-size: 25px;
+	font-weight: bold;
+}
+.footer-menu {
+	margin-top: 1rem;
+	margin-left: 350px;
+}
+  
+@media screen and (max-width: 500px) {
+	.header a {
+	  float: none;
+	  display: block;
+	  text-align: left;
+	}
+	
+	.header-right {
+	  float: none;
+	}
+}
