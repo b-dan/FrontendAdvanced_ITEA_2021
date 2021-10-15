@@ -28,3 +28,18 @@ function validate(elem) {
         elem.style.border = '1px solid red';
     }
 };
+
+let city_placeholder = document.getElementById('city-list');
+const api_url = 'https://api.hh.ru/areas/5';
+async function getCity() {
+    const response = await fetch(api_url);
+    const data = await response.json();
+    for(let i = 0;i<data.areas.length;i++){
+        for(let j = 0; j <data.areas[i].areas.length;j++){
+            var liLast = document.createElement('option');
+            liLast.value = data.areas[i].areas[j].name;
+            city_placeholder.append(liLast);
+        }
+    }
+}
+getCity();
