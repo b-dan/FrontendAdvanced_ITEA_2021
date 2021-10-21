@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Raleway';
-    src: url(../fonts/Raleway-Regular.ttf);
+    src: url(./fonts/Raleway-Regular.ttf);
 }
 .site {
     
@@ -58,6 +58,7 @@
     border-bottom: 1px solid #E2E2E2;
     padding-bottom: 18px;
     padding-top: 70px;
+    margin-bottom: 40px;
 }
 
 .card_contacts {
