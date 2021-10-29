@@ -1,0 +1,13 @@
+<div class="card col-lg-4 col-md-6 mac-card" style="width: 18rem;">
+    <img class="card-img-top" id="card-image" src="" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" id="card-title"></h5>
+      <p class="card-text" id="card-text"></p>
+        <div class="card-bottom">
+          <p class="card-price" id="card-price"></p>
+          <a class="btn btn-primary hidden-button" id="buy-button">В корзину</a>
+          <button class="like-button"><img class="card-like" id="like-button" src="img/heart.svg" alt=""></button>
+        </div>
+        
+    </div>
+</div>
