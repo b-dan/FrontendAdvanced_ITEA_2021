@@ -92,9 +92,13 @@ $(window).load(function() {
         let finalPriceModal = 0;
         
         document.getElementById('mac-card'+j).onclick = function(e){
-                if(e.target.nodeName !== 'A' ){
+                if(e.target.nodeName !== 'A' && e.target.id !== 'like-button'+j){
                     priceModal =  menuArr[j].price;
                     finalPriceModal =  menuArr[j].price;
+                    if(priceModal===finalPriceModal){
+                        idModal=1;
+                        document.getElementById('modal-count').innerText = 1;
+                    }
                     $('#myModal').modal('show');
                     document.getElementById('modal-img').setAttribute('src', menuArr[j].productImageUrl);
                     document.getElementById('modal-title').innerText = menuArr[j].productName;
@@ -125,6 +129,17 @@ $(window).load(function() {
                         document.getElementById('cart-title-middle-price').innerText = finalPriceModal +" ₴";
                         document.getElementById('cart-right').innerText = finalPriceModal+50+" ₴";
                     }
+                    document.getElementById('modal-like-button').onclick = function(){
+                        if(menuArr[j].like!=0){
+                                    document.getElementById('modal-like-button').setAttribute("src", 'img/heart1.svg');
+                                    menuArr[j].like = parseInt(menuArr[j].like)-1;
+                                    localStorage.menu = JSON.stringify(menuArr);
+                            } else {
+                                    document.getElementById('modal-like-button').setAttribute("src", 'img/heart.svg');
+                                    menuArr[j].like = parseInt(menuArr[j].like)+1;
+                                    localStorage.menu = JSON.stringify(menuArr);
+                            }
+                      }
                 }
 
             }
