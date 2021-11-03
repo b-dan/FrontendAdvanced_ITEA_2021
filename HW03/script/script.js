@@ -9,12 +9,15 @@ $(document).ready(function() {
     let finalPrice = 0;
     for(let i = 0; i<menuArr.length; i++){
         console.log(i);
+        let id = 1;
         
         $.get('card.txt', function(data) {
             
-            let id = 1;
+            
 
             $("#fetch-card").append(data);
+            
+
             document.getElementById('card-image').setAttribute("id", "card-image"+i);
             document.getElementById('card-image'+i).setAttribute("src", menuArr[i].productImageUrl);
 
@@ -29,6 +32,8 @@ $(document).ready(function() {
             document.getElementById('card-price'+i).innerText = menuArr[i].price + ' грн.';
 
             document.getElementById('buy-button').setAttribute("id", "buy-button"+i);
+
+            
             document.getElementById('buy-button'+i).onclick = function(){
                 document.getElementById('cart-text').innerText = menuArr[i].ingredients;
                 document.getElementById('cart-name').innerText = menuArr[i].productName;
@@ -75,13 +80,62 @@ $(document).ready(function() {
                             localStorage.menu = JSON.stringify(menuArr);
                             }
               }
+              document.getElementById('mac-card').setAttribute("id", "mac-card"+i);
 
+            
 
         });
         
         console.log("============")
+        
     }
+    
     console.log(menuArr[0].productImageUrl);
 });
 
+$(window).load(function() {
+    
+    let idModal = 1;
+    for(let j = 0; j<menuArr.length; j++){
+        let priceModal = 0;
+        let finalPriceModal = 0;
+        
+        document.getElementById('mac-card'+j).onclick = function(e){
+                if(e.target.nodeName !== 'A' ){
+                    priceModal =  menuArr[j].price;
+                    finalPriceModal =  menuArr[j].price;
+                    $('#myModal').modal('show');
+                    document.getElementById('modal-img').setAttribute('src', menuArr[j].productImageUrl);
+                    document.getElementById('modal-title').innerText = menuArr[j].productName;
+                    document.getElementById('modal-content').innerText = menuArr[j].ingredients;
+                    document.getElementById('modal-cart-right').innerText = menuArr[j].price+" ₴";
+                    document.getElementById('modal-plus').onclick = function(){
+                        idModal = idModal + 1;
+                        document.getElementById('modal-count').innerText = idModal;
+                        finalPriceModal = finalPriceModal+priceModal;
+                        document.getElementById('modal-cart-right').innerText = finalPriceModal+" ₴";
+                    }
+                    document.getElementById('modal-minus').onclick = function(){
+                        if(idModal==1){
+                            
+                        }
+                        else{
+                            idModal = idModal - 1;
+                            document.getElementById('modal-count').innerText = idModal;
+                            finalPriceModal = finalPriceModal-priceModal;
+                            document.getElementById('modal-cart-right').innerText = finalPriceModal+" ₴";
+                        }                
+                    }
+                    document.getElementById('modal-add-button').onclick = function(){
+                        document.getElementById('cart-text').innerText = menuArr[j].ingredients;
+                        document.getElementById('cart-name').innerText = menuArr[j].productName;
+                        document.getElementById('cart-title-middle-price').innerText = priceModal +" ₴";
+                        document.getElementById('cart-right').innerText = finalPriceModal+50+" ₴";
+                    }
 
+                }
+
+            }
+            
+    }
+});

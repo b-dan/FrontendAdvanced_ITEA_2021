@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
+
+.modal {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-top{
+    display: flex;
+    flex-direction: row; 
+}
+
+.modal-title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.modal-bottom{
+    display: flex;
+    flex-direction: row;  
+  }
+
+.modal-text-block{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;  
+}
+
+.modal-img {
+    margin: 20px 46px 80px 25px;
+    width: 286px;
+    height: 266px;
+    left: 77px;
+    top: 41px;
+    
+    background: url(.jpg), #C4C4C4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.modal-content {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #443E3E;
+}
+
+.modal-bottom-like {
+    flex-direction: column;
+    margin-left: 22px;
+    margin-bottom: 22px;
+}
+
+.modal-like {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 13px 14px;
+    width: 230px;
+    height: 60px;
+    left: 77px;
+    top: 577px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.modal-like-button{
+    left: 6.09%;
+    right: 76.52%;
+    top: 22.71%;
+    bottom: 22.71%;
+    border: none;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+.modal-like-sub {
+    position: static;
+    width: 147px;
+    height: 34px;
+    left: 69px;
+    top: 13px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #999999;
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 15px;
+}
+
+.modal-bottom-add {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.modal-add-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 35px;
+    width: 210px;
+    height: 50px;
+    left: 613px;
+    top: 587px;
+    background: #FF6C01;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.modal-bottom-add:hover .modal-add-button{
+    background-color: #FF6C01;
+}
+
+.modal-plus {
+    margin-right: 5px;
+    border: none;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    left: 88px;
+    top: 0px;
+}
+
+.modal-minus {
+    margin-left: 5px;
+    border: none;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    left: 88px;
+    top: 0px;
+}
+
+.modal-count {
+    font-weight: 600;
+    font-size: 24px;
+    margin-left: 15px;
+}
+
+span.modal-cart-right {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}

@@ -9,26 +9,13 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/modal.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <div class="modal" id="myModal" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Заряд аккумулятора</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p id="battery_charge"></p>
-            </div>
-            <div class="modal-footer">
-				<button type="button" class="btn btn-secondary btn_cart" data-bs-dismiss="modal">OK</button>
-            </div>
-          </div>
-        </div>
+    
       </div>
     <div class="site">
     <div class="container-fluid header">
@@ -122,5 +109,36 @@
     <script src="menu.json"></script>
     <script src="./script/script.js"></script>
 </body>
+<div class="modal" id="myModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content modal-body">
+        <div class="modal-top">
+            <img class="modal-img" id="modal-img" src="https://mafia.ua/storage/editor/fotos/450x450/brodo-di-galina.jpeg" alt="Card image cap">
+            <div class="modal-text-block">
+                <h5 class="modal-title" id="modal-title">Бургер з куркою та 
+                    медовою гірчицею</h5><br>
+                <p class="" id="modal-content">Житній бургер з хрумкою куркою та скибочками бекону, ароматною смаженою цибулею, соленими огірками, сиром Чеддер, приправлений пікантною медовою гірчицею.</p>
+                <h6 class="" id="modal-title"></h5>
+                <p class="" id="modal-contentk"></p>
+            </div>
+        </div>
+        <div class="modal-bottom">
+            <div class="modal-bottom-like" style="color: #999999;">
+                <div>Додати в улюблене?</div>
+                <div class="modal-like">
+                    <button class="modal-like-button"><img class="card-like" id="like-button" src="img/heart.svg" alt=""></button>
+                    <div class="modal-like-sub">1123 користувача додали в улюблене</div>
+                </div>
+            </div>
+            <div class="modal-bottom-add">
+                <button class="modal-plus" id="modal-plus"><img class="modal-plus" src="img/+.svg" alt=""></button>
+                <div><span class="modal-count" id="modal-count">1</span></div>
+                <button class="modal-minus" id="modal-minus"><img class="modal-minus" src="img/-.svg" alt=""></button>
+                <button type="button" class="btn btn-secondary modal-add-button" id="modal-add-button" data-bs-dismiss="modal"><span class="">Додати</span><span class="modal-cart-right" id="modal-cart-right"></span></button>
+            </div>
+              
+        </div>
+      </div>
+    </div>
 
 </html>
