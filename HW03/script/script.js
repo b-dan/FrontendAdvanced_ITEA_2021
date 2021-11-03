@@ -48,10 +48,9 @@ $(document).ready(function() {
             document.getElementById('plus').onclick = function(){
                 id = id + 1;
                 document.getElementById('cart-title-middle-count').innerText = id;
-                finalPrice = finalPrice+price;
+                finalPrice = price*id;
                 document.getElementById('cart-title-middle-price').innerText = finalPrice+" ₴";
                 document.getElementById('cart-right').innerText = finalPrice + 50+" ₴";
-                console.log("lllllllllllllll"+price)
             }
             document.getElementById('minus').onclick = function(){
                 if(id==1){
@@ -81,16 +80,8 @@ $(document).ready(function() {
                             }
               }
               document.getElementById('mac-card').setAttribute("id", "mac-card"+i);
-
-            
-
         });
-        
-        console.log("============")
-        
     }
-    
-    console.log(menuArr[0].productImageUrl);
 });
 
 $(window).load(function() {
@@ -112,7 +103,7 @@ $(window).load(function() {
                     document.getElementById('modal-plus').onclick = function(){
                         idModal = idModal + 1;
                         document.getElementById('modal-count').innerText = idModal;
-                        finalPriceModal = finalPriceModal+priceModal;
+                        finalPriceModal = priceModal*idModal;
                         document.getElementById('modal-cart-right').innerText = finalPriceModal+" ₴";
                     }
                     document.getElementById('modal-minus').onclick = function(){
@@ -129,10 +120,11 @@ $(window).load(function() {
                     document.getElementById('modal-add-button').onclick = function(){
                         document.getElementById('cart-text').innerText = menuArr[j].ingredients;
                         document.getElementById('cart-name').innerText = menuArr[j].productName;
-                        document.getElementById('cart-title-middle-price').innerText = priceModal +" ₴";
+                        document.getElementById('cart-title-middle-count').innerText = idModal;
+
+                        document.getElementById('cart-title-middle-price').innerText = finalPriceModal +" ₴";
                         document.getElementById('cart-right').innerText = finalPriceModal+50+" ₴";
                     }
-
                 }
 
             }
