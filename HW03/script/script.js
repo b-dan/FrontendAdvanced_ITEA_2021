@@ -3,10 +3,11 @@ $.getJSON("menu.json", function(menu) {
 });
 
 let menuArr = JSON.parse(localStorage.menu);
-
+let price = 0;
+let finalPrice = 0;
 $(document).ready(function() {
-    let price = 0;
-    let finalPrice = 0;
+    
+    
     for(let i = 0; i<menuArr.length; i++){
         console.log(i);
         let id = 1;
@@ -35,6 +36,7 @@ $(document).ready(function() {
 
             
             document.getElementById('buy-button'+i).onclick = function(){
+                document.getElementById('cart-title-middle-count').innerText = 1;
                 document.getElementById('cart-text').innerText = menuArr[i].ingredients;
                 document.getElementById('cart-name').innerText = menuArr[i].productName;
                 document.getElementById('cart-title-middle-price').innerText = menuArr[i].price+" ₴";
@@ -43,21 +45,31 @@ $(document).ready(function() {
                 finalPrice =  menuArr[i].price;
                 console.log("===================//////////////"+price);
             }
-
             
             document.getElementById('plus').onclick = function(){
-                id = id + 1;
+                if(parseInt(document.getElementById('cart-title-middle-count').innerText)!=1){
+                    id = parseInt(document.getElementById('cart-title-middle-count').innerText)+1;
+                }else{
+                    id = id + 1;
+                }
+                //finalPrice = parseInt(document.getElementById('cart-title-middle-price').innerText);
+                //price = parseInt(document.getElementById('cart-title-middle-price').innerText/id);
+                //id = id + 1;
                 document.getElementById('cart-title-middle-count').innerText = id;
                 finalPrice = price*id;
                 document.getElementById('cart-title-middle-price').innerText = finalPrice+" ₴";
                 document.getElementById('cart-right').innerText = finalPrice + 50+" ₴";
             }
             document.getElementById('minus').onclick = function(){
-                if(id==1){
+                if(id==1&&parseInt(document.getElementById('cart-title-middle-count').innerText)===1){
                     
                 }
                 else{
-                    id = id - 1;
+                    if(parseInt(document.getElementById('cart-title-middle-count').innerText)!=1){
+                        id = parseInt(document.getElementById('cart-title-middle-count').innerText)-1;
+                    }else{
+                        id = id - 1;
+                    }
                     document.getElementById('cart-title-middle-count').innerText = id;
                     finalPrice = finalPrice-price;
                     document.getElementById('cart-title-middle-price').innerText = finalPrice+" ₴";
@@ -104,6 +116,7 @@ $(window).load(function() {
                     document.getElementById('modal-title').innerText = menuArr[j].productName;
                     document.getElementById('modal-content').innerText = menuArr[j].ingredients;
                     document.getElementById('modal-cart-right').innerText = menuArr[j].price+" ₴";
+                    price = menuArr[j].price;
                     document.getElementById('modal-plus').onclick = function(){
                         idModal = idModal + 1;
                         document.getElementById('modal-count').innerText = idModal;
@@ -125,21 +138,35 @@ $(window).load(function() {
                         document.getElementById('cart-text').innerText = menuArr[j].ingredients;
                         document.getElementById('cart-name').innerText = menuArr[j].productName;
                         document.getElementById('cart-title-middle-count').innerText = idModal;
-
+                        finalPrice = finalPriceModal;
                         document.getElementById('cart-title-middle-price').innerText = finalPriceModal +" ₴";
                         document.getElementById('cart-right').innerText = finalPriceModal+50+" ₴";
                     }
-                    document.getElementById('modal-like-button').onclick = function(){
-                        if(menuArr[j].like!=0){
-                                    document.getElementById('modal-like-button').setAttribute("src", 'img/heart1.svg');
+
+                    if(menuArr[j].like===1){
+                        document.getElementById('modal-like-button').setAttribute("src", 'img/heart1.svg');
+                        document.getElementById('modal-like-sub').innerText = parseInt(menuArr[j].like) + ' користувача додали в улюблене';
+                    }else {
+                        document.getElementById('modal-like-sub').innerText = parseInt(menuArr[j].like) + ' користувача додали в улюблене';
+                    }
+
+                    document.getElementById('modal-like-button').onclick = function(e){
+                        if(menuArr[j].like===1){
+                                    document.getElementById('modal-like-button').setAttribute("src", 'img/heart.svg');
                                     menuArr[j].like = parseInt(menuArr[j].like)-1;
+                                    document.getElementById('modal-like-sub').innerText = parseInt(menuArr[j].like) + ' користувача додали в улюблене';
+                                    document.getElementById('like-button'+j).setAttribute("src", 'img/heart.svg');
                                     localStorage.menu = JSON.stringify(menuArr);
                             } else {
-                                    document.getElementById('modal-like-button').setAttribute("src", 'img/heart.svg');
+                                    document.getElementById('modal-like-button').setAttribute("src", 'img/heart1.svg');
                                     menuArr[j].like = parseInt(menuArr[j].like)+1;
+                                    document.getElementById('modal-like-sub').innerText = parseInt(menuArr[j].like) + ' користувача додали в улюблене';
+                                    document.getElementById('like-button'+j).setAttribute("src", 'img/heart1.svg');
                                     localStorage.menu = JSON.stringify(menuArr);
                             }
-                      }
+                    }
+                    
+                    
                 }
 
             }
