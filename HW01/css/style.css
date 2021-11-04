@@ -105,7 +105,7 @@ h2 {
 	font-size: 0.875rem;
 	font-weight: 200;
 }
-.radio_form_choice_1 {
+/* .radio_form_choice_1 {
 	display: inline-block;
 	margin-right: 1rem;
 }
@@ -115,7 +115,7 @@ h2 {
 }
 .radio_form_choice_3 {
 	display: inline-block;
-}
+} */
 
 
 .login_register,
@@ -332,3 +332,69 @@ th {
 	  float: none;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.radio_form_choice {
+	display: inline-block;
+	margin-right: 1rem;
+}
+.radio_form_choice input[type=radio] {
+	display: none;
+}
+.radio_form_choice label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 25px;
+	margin-right: 0;
+	line-height: 18px;
+	user-select: none;
+}
+.radio_form_choice label:before {
+	content: "";
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	background: url(../img/Ellipse11.svg) 0 0 no-repeat;
+}
+ 
+/* Checked */
+.radio_form_choice input[type=radio]:checked + label:before {
+	background: url(../img/Ellipse10.svg) 38% 33% no-repeat,
+				url(../img/Ellipse11.svg) 65% 27% no-repeat;
+}
+ 
+/* Hover */
+.radio_form_choice label:hover:before {
+	filter: brightness(120%);
+}
+ 
+/* Disabled */
+.radio_form_choice input[type=radio]:disabled + label:before {
+	filter: grayscale(100%);
+}
+
+
