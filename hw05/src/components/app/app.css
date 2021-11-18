@@ -1,0 +1,150 @@
+body {
+    font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h1 span {
+    color: #4bcaff;
+}
+
+.menu {
+    width: 100%;
+    background-color: #35444f;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* width: 100%; */
+    padding: 0;
+}
+
+.head-menu {
+    list-style-type: none;
+    min-width: 15%;
+    max-width: 21%;
+    text-align: center; 
+    padding: 0 15px 0 15px;
+}
+
+.head-menu:hover {
+    background-color: #222f3a;
+    padding: 0 14px 0 14px;
+    border-left: 1px solid #818181;
+    border-right: 1px solid #818181;
+
+}
+
+.head-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem 0;
+    width: 100%;
+    display: inline-block;
+    font-size: 24px;     
+}
+
+.main-block {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #495863;
+    width: 380px;
+    padding: 0;
+}
+
+.in-main-menu {
+    display: flex;
+    justify-content: left;
+    list-style-type: none;
+    padding: 8px 130px 8px 28px;
+}
+
+.in-main-menu:hover {
+    background-color: #b4b7ba;
+    padding-left: 60px;
+}
+
+.in-main-menu a {
+    text-decoration: none;
+    padding: 1rem 0;
+    font-size: 24px;
+    color: #495863;     
+}
+
+.right-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #495863;
+    padding: 0;
+    width: 827px;
+    height: 529px;
+    margin-top: 16px;
+    margin-left: 52px;
+    
+}
+
+.text-block {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0 50px 52px;
+}
+
+.footer-block {
+    background-color: #b4b7ba;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.in-footer-menu {
+    display: flex;
+    justify-content: left;
+    list-style-type: none;
+    padding-left: 44px;
+    
+}
+
+.in-footer-menu a:hover {
+    color: #3181a6;
+    text-decoration: underline;
+}
+
+.in-footer-menu a {
+    text-decoration: none;
+    padding: 1rem 0;
+    font-size: 24px;
+    color: #0c1927;     
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 0;
+    font-size: 24px;
+    color: #0c1927;
+    margin: 0 auto;
+    margin-right: 30px;
+}
