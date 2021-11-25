@@ -1,0 +1,103 @@
+.container {
+    width: 400px;
+    height: 260px;
+    background-color: #FF3500;
+    border: 2px solid #A62300;
+    border-radius: 10px;
+}
+
+.top {
+    
+    margin: 15px 15px 18px 15px;
+    height: 60%;
+    border: 2px solid #A62300;
+    background-color: #EE6B9E;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.top-name {
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 20px;
+}
+
+.top-out-block {
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: white;
+    /* font: bold 350%/1 sans-serif; */
+    font-size: 70px;
+}
+
+.buttons {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    transform: skewX(45deg);
+}
+
+.btn>div {
+    font-family: "Lucida Console", "Courier New", monospace;
+    transform: skewX(-45deg);
+}
+
+.btn {
+    font-family: "Lucida Console", "Courier New", monospace;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: .5em 1em;
+    border: 2px solid #A62300;
+    background-color: initial;
+    background-image: linear-gradient(-180deg, #EE6B9E, #E62C03);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    border-radius: 5px;
+    margin: .2em;
+    /* background: #FF9073; */
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font: bold 120%/1 sans-serif;
+}
+
+
+/* 
+
+.btn {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow .2s;
+}
+
+.btn:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+} */
