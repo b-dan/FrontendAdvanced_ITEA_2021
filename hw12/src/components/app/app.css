@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Mulish-Bold';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../../../public/fonts/Mulish-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Mulish-Regular';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../../../public/fonts/Mulish-Regular.ttf');
+}
+
+*{
+    font-family: 'Mulish-Bold';
+}
