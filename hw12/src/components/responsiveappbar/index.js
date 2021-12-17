@@ -27,8 +27,6 @@ const ResponsiveAppBar = () => {
 
   const handleCloseNavMenu = (e) => {
     setAnchorElNav(null);
-    // console.log(colorM);
-    // setColorM(e.target.style.color);
     if (e.target.style.color === 'rgb(60, 100, 177)') {
       e.target.style.color = "#373F41";
     } else {

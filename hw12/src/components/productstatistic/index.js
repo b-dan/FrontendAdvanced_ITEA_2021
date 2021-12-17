@@ -18,7 +18,7 @@ const Img = styled('img')({
 export default function ProductStatistic() {
     return (
         <>
-            <Paper elevation={0} sx={{ p: 2, margin: 'auto', maxWidth: 500, flexGrow: 1, backgroundColor: 'transparent', maxWidth: '860px', mt: 10 }}>
+            <Paper elevation={0} sx={{ p: 2, margin: 'auto', flexGrow: 1, backgroundColor: 'transparent', maxWidth: '860px', mt: 10 }}>
                 <Grid container spacing={2}>                  
                     <Grid item xs={14} sm container>
                         <Grid item xs container direction="column" spacing={2}>

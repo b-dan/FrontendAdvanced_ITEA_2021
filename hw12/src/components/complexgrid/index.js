@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
 import Button from '@mui/material/Button';
 import desktop from '../../img/desktop.png'
-import complexgrid from '../complexgrid/complexgrid.css'
 
 const Img = styled('img')({
   margin: 'auto',
@@ -18,7 +17,7 @@ const Img = styled('img')({
 export default function ComplexGrid() {
   return (
     <>
-    <Paper elevation={0} sx={{ p: 2, margin: 'auto', maxWidth: 500, flexGrow: 1, backgroundColor: 'transparent', maxWidth: '860px', mt: 10, pb: 10 }}>
+    <Paper elevation={0} sx={{ p: 2, margin: 'auto', flexGrow: 1, backgroundColor: 'transparent', maxWidth: '860px', mt: 10, pb: 10 }}>
       <Grid container spacing={2}>
         <Grid item xs={14} sm container>
           <Grid item xs container direction="column" spacing={2}>
